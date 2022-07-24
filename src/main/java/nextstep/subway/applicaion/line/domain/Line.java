@@ -1,6 +1,9 @@
 package nextstep.subway.applicaion.line.domain;
 
+import nextstep.subway.applicaion.station.domain.Station;
+
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Line {
@@ -12,6 +15,8 @@ public class Line {
 	private String color;
 	private Long upStationId;
 	private Long downStationId;
+	@OneToMany(mappedBy = "line", cascade = CascadeType.ALL)
+	private List<LineStation> stations;
 	private Integer distance;
 
 	public Line() {

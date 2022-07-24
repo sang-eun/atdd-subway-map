@@ -1,1 +1,2 @@
 TRUNCATE TABLE line;
+TRUNCATE TABLE line_station;
